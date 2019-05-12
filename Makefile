@@ -14,8 +14,11 @@ build/em_fourier.pdf: em_fourier.py matplotlibrc header-matplotlib.tex | build
 
 build/ek_fourier.pdf: ek_fourier.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python ek_fourier.py
+
+build/doppel.pdf: doppel.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python doppel.py
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/einzel_mittel.pdf  build/einzel_klein.pdf build/em_fourier.pdf build/ek_fourier.pdf
+build/main.pdf: build/einzel_mittel.pdf  build/einzel_klein.pdf build/em_fourier.pdf build/ek_fourier.pdf build/doppel.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \

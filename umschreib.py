@@ -16,9 +16,9 @@ def csv_write(pathToFile, data):
         spamwriter = csv.writer(csvfile, delimiter=";", quotechar = '|', quoting=csv.QUOTE_MINIMAL )
         spamwriter.writerow(data)
 
-werte = csv_read("csv/einzel_klein.csv")
-xdata = np.zeros(52)
-ydata = np.zeros(52)
+werte = csv_read("csv/doppelspalt.csv")
+xdata = np.zeros(49)
+ydata = np.zeros(49)
 
 ignore = True
 i=0
@@ -30,7 +30,7 @@ for values in werte:
         ydata[i] = float(values[1]) 
         
         i+=1
-a = np.zeros((52, 2))
+a = np.zeros((49, 2))
 
 a[:,0] = xdata
 a[:,1] = ydata
