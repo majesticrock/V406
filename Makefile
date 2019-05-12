@@ -9,16 +9,10 @@ build/einzel_mittel.pdf: einzel_mittel.py matplotlibrc header-matplotlib.tex | b
 build/einzel_klein.pdf: einzel_klein.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python einzel_klein.py
 
-build/em_fourier.pdf: em_fourier.py matplotlibrc header-matplotlib.tex | build
-	TEXINPUTS=$$(pwd): python em_fourier.py
-
-build/ek_fourier.pdf: ek_fourier.py matplotlibrc header-matplotlib.tex | build
-	TEXINPUTS=$$(pwd): python ek_fourier.py
-
 build/doppel.pdf: doppel.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python doppel.py
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/einzel_mittel.pdf  build/einzel_klein.pdf build/em_fourier.pdf build/ek_fourier.pdf build/doppel.pdf
+build/main.pdf: build/einzel_mittel.pdf  build/einzel_klein.pdf  build/doppel.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \
