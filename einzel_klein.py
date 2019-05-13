@@ -37,6 +37,7 @@ print(popt)
 print(np.sqrt(pcov))
 
 #plt.xscale('log')
+plt.grid()
 plt.xlabel(r"$\frac{x}{L}$ / rad")
 plt.ylabel(r"$I$ /  A")
 plt.legend()

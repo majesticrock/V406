@@ -15,7 +15,7 @@ build/doppel.pdf: doppel.py matplotlibrc header-matplotlib.tex | build
 build/doppel_einzel.pdf: doppel_einzel.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python doppel_einzel.py
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/einzel_mittel.pdf  build/einzel_klein.pdf  build/doppel.pdf
+build/main.pdf: build/einzel_mittel.pdf  build/einzel_klein.pdf  build/doppel.pdf build/doppel_einzel.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \

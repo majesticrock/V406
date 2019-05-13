@@ -35,7 +35,7 @@ plt.plot(x_line, func(x_line, *popt), "b-", label="Fit")
 
 print(popt)
 print(np.sqrt(pcov))
-
+plt.grid()
 #plt.xscale('log')
 plt.xlabel(r"$\frac{x}{L}$ / rad")
 plt.ylabel(r"$I$ /  A")

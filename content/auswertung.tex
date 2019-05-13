@@ -55,7 +55,7 @@ der Abstand der Spalte voneinander berechnet.
     beachtet wird. Die gemessenen Werte für die Verschiebung vom Nullpunkt und zugehörige Intensitäten sind 
     in \autoref{tab:spalt2} zu sehen. Die Verschiebungswinkel bestimmen sich wie bereits zuvor.
     Es wird darüber mittels Python 3.7.0 eine Ausgleichskurve der Form von Gleichung 
-    \eqref{eqn:intensitaet-einzel} bestimmt, welche in \autoref{fig:einzel_klein.pdf} zu sehen ist. Die Amplitude und die Spaltbreite sind 
+    \eqref{eqn:intensitaet-einzel} bestimmt, welche in \autoref{fig:einzel_klein} zu sehen ist. Die Amplitude und die Spaltbreite sind 
     \\ \\ 
     \centerline{$A_0 = (1.983 \pm 0.039) $A,}
     \centerline{$b = (4.645\pm 0.106) \cdot 10^{-5}$m.}
@@ -68,10 +68,42 @@ der Abstand der Spalte voneinander berechnet.
         \label{fig:einzel_klein}
     \end{figure}
 
-\subsection{Bestimmung der Breite und des Spaltabstandes beim Doppelspalt}   
+\subsection{Bestimmung der Breite und des Spaltabstandes beim Doppelspalt}
+    Zur Bestimmung der Eigenschaften des Doppelspaltes werden die Werte aus \autoref{tab:doppel} verwendet. Das Hauptmaximum liegt bei 
+    $x_0 = -1.0$ mm. Die Bestimmung erfolgt analog zum Einzelspalt, hierbei wird allerdings eine Ausgleichskurve der Form von Gleichung \eqref{eqn:intensitaet-doppel}
+    bestimmt. Zu Beachten ist dabei, die Amplitude korrekt einzustellen; hier wird der Wert des Hauptmaximums als Vorfaktor verwendet.
+    Mittels Python 3.7.0 werden die Spaltbreite $b$ und der Spaltabstand $s$ zu 
+    \\ \\
+    \centerline{$s = (4.194 \pm 0.020) \cdot 10^{-3} $ m,}
+    \centerline{$b = (2.623 \pm 0.018) \cdot 10^{-3}$ m,}
+    \\ \\
+    bestimmt. Die zugehörige Ausgleichskurve ist in \autoref{fig:doppel} dargestellt. Zusätzlich ist eine Theoriekurve abgebildet. Diese 
+    stellt die Funktion \eqref{eqn:intensitaet-doppel} mit den an der Blende gegeben Theoriewerten
+     \\ \\
+    \centerline{$s = 2.5 \cdot 10^{-3} $ m,}
+    \centerline{$b = 1.5 \cdot 10^{-3}$ m,}
+    \\ \\
+    dar. 
+    \input{../content/doppel.tex}
     \begin{figure}
         \centering
         \includegraphics{build/doppel.pdf}
-        \caption{Auftragung der Winkel gegen die Intensitäten beim Doppelspalt mit Ausgleichskurve.}
+        \caption{Auftragung der Winkel gegen die Intensitäten beim Doppelspalt mit Ausgleichs- und Theoriekurve.}
         \label{fig:doppel}
     \end{figure}
+
+    
+    Des Weiteren ist in \autoref{fig:doppel_einzel} die bereits in \autoref{fig:doppel} dargestellte Ausgleichskurve und eine nach Gleichung
+    \eqref{eqn:intensitaet-einzel} bestimmte Kurve zu sehen, welche die theoretische Verteilung eines Einzelspaltes zeigt, welcher die selbe 
+    Breite $b$ wie der Doppelspalt aufweist. Anzumerken ist auch hier, dass die Amplitude der Amplitude des Doppelspaltes angepasst ist.
+    Es ist zu sehen, dass die Kurve des Einzelspaltes ungefähr der Einhüllenden des Doppelspaltes entspricht.
+
+    \begin{figure}
+        \centering
+        \includegraphics{build/doppel_einzel.pdf}
+        \caption{Vergleich der Ausgleichskurve des Doppelspaltes mit der eines Einzelspaltes gleicher Breite.}
+        \label{fig:doppel_einzel}
+    \end{figure}
+
+
+    
