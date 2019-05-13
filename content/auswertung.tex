@@ -1,23 +1,24 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 Zur Auswertung der Messungen an den verschiedenen Spalten ist zunächst bei nicht aktiviertem Laser ein Dunkelstrom von
-$I_{\symup{Dunkel}} = 0.175$ nA an der Diode gemessen worden.
-Des Weiteren beträgt der Abstand zwischen Diode und Spalt $L = 1.08$ m. Der verwendete Laser hat eine Wellenlänge von $\lambda = 633$nm.
+$I_{\symup{Dunkel}} = 0,175$ nA an der Diode gemessen worden.
+Des Weiteren beträgt der Abstand zwischen Diode und Spalt $L = 1,08$ m. Der verwendete Laser hat eine Wellenlänge von $\lambda = 633$nm.
 Im Folgenden werden die Breiten der jeweiligen gemessenen Spalte mittels der Fraunhofernäherung bestimmt. Beim Doppelspalt wird zusätzlich
 der Abstand der Spalte voneinander berechnet.
 \subsection{Bestimmung der Breite des ersten Einzelspaltes}
     Die Verschiebungen $x$ vom Nullpunkt sowie die zugehörigen Intensitäten $I$, welche die Messung am ersten Spalt ergaben sind in \autoref{tab:spalt1}
     zu sehen. Der benötigte Verschiebungswinkel ergibt sich durch $\Phi = \frac{x -x_0}{L}$. Die Verschiebung $x_0$ gibt dabei die 
     Position des Hauptmaximums an, welches sich in der Messung von $0$ unterscheiden kann. Beim ersten Spalt liegt das Hauptmaximum bei 
-    $x_0 = - 0.75$ mm.
+    $x_0 = - 0,75$ mm.
     \input{../content/spalt1.tex}
     Zur Bestimmung der Breite des Spaltes wird eine Ausgleichskurve aus den Verschiebungswinkeln und den vom Dunkelstrom bereinigten
     Intensitäten der Form von Gleichung \eqref{eqn:intensitaet-einzel} gebildet. 
     Diese ist in \autoref{fig:einzel_mittel} dargestellt. Mittels Python 3.7.0 werden die Amplitude $A_0$ und die gesuchte Spaltbreite $b$ zu 
-    \\ \\ 
-    \centerline{$A_0 = (1.175 \pm 0.011) $A,}
-    \centerline{$b = (1.171 \pm 0.012) \cdot 10^{-4}$m,}
-    \\ \\
+    
+    \begin{align}
+        A_0 &= (1,175 \pm 0,011) \symup{A}, \\
+        b &= (1,171 \pm 0,012) \cdot 10^{-4} \symup{m}, 
+    \end{align}
     bestimmt. Zu Beachten ist hierbei jedoch, dass in der Ausgleichsrechnung der Wert des Hauptmaximums ($I_{\symup{max}}$)
     nicht beachtet wird, da sonst, wie in Gleichung 
     \eqref{eqn:intensitaet-einzel} zu erkennen, durch $\sin(\Phi = 0)$ geteilt werden würde.
@@ -56,10 +57,10 @@ der Abstand der Spalte voneinander berechnet.
     in \autoref{tab:spalt2} zu sehen. Die Verschiebungswinkel bestimmen sich wie bereits zuvor.
     Es wird darüber mittels Python 3.7.0 eine Ausgleichskurve der Form von Gleichung 
     \eqref{eqn:intensitaet-einzel} bestimmt, welche in \autoref{fig:einzel_klein} zu sehen ist. Die Amplitude und die Spaltbreite sind 
-    \\ \\ 
-    \centerline{$A_0 = (1.983 \pm 0.039) $A,}
-    \centerline{$b = (4.645\pm 0.106) \cdot 10^{-5}$m.}
-    \\ \\
+    \begin{align}
+        A_0 &= (1,983 \pm 0,039) \symup{A}, \\
+        b &= (4,645\pm 0,106) \cdot 10^{-5} \symup{m}. 
+    \end{align}
     \input{../content/spalt2.tex}
     \begin{figure}
         \centering
@@ -70,19 +71,19 @@ der Abstand der Spalte voneinander berechnet.
 
 \subsection{Bestimmung der Breite und des Spaltabstandes beim Doppelspalt}
     Zur Bestimmung der Eigenschaften des Doppelspaltes werden die Werte aus \autoref{tab:doppel} verwendet. Das Hauptmaximum liegt bei 
-    $x_0 = -1.0$ mm. Die Bestimmung erfolgt analog zum Einzelspalt, hierbei wird allerdings eine Ausgleichskurve der Form von Gleichung \eqref{eqn:intensitaet-doppel}
+    $x_0 = -1,0$ mm. Die Bestimmung erfolgt analog zum Einzelspalt, hierbei wird allerdings eine Ausgleichskurve der Form von Gleichung \eqref{eqn:intensitaet-doppel}
     bestimmt. Zu Beachten ist dabei, die Amplitude korrekt einzustellen; hier wird der Wert des Hauptmaximums als Vorfaktor verwendet.
     Mittels Python 3.7.0 werden die Spaltbreite $b$ und der Spaltabstand $s$ zu 
-    \\ \\
-    \centerline{$s = (4.194 \pm 0.020) \cdot 10^{-3} $ m,}
-    \centerline{$b = (2.623 \pm 0.018) \cdot 10^{-3}$ m,}
-    \\ \\
+    \begin{align}
+        s &= (4,194 \pm 0,020) \cdot 10^{-3} \symup{m}, \\
+        b &= (2,623 \pm 0,018) \cdot 10^{-3} \symup{m},
+    \end{align}
     bestimmt. Die zugehörige Ausgleichskurve ist in \autoref{fig:doppel} dargestellt. Zusätzlich ist eine Theoriekurve abgebildet. Diese 
     stellt die Funktion \eqref{eqn:intensitaet-doppel} mit den an der Blende gegeben Theoriewerten
-     \\ \\
-    \centerline{$s = 2.5 \cdot 10^{-3} $ m,}
-    \centerline{$b = 1.5 \cdot 10^{-3}$ m,}
-    \\ \\
+    \begin{align}
+        s &= 2,5 \cdot 10^{-3} \symup{m}, \\
+        b &= 1,5 \cdot 10^{-3} \symup{m},
+    \end{align}
     dar. 
     \input{../content/doppel.tex}
     \begin{figure}
