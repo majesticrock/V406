@@ -38,7 +38,7 @@ plt.plot(xdata, ydata, "rx", label="Messwerte")
 plt.plot(0, (1.4 - 0.000175) * 10**(-6), "ro", label="Nicht betrachteter Messwert")
 popt, pcov = curve_fit(func, xdata, ydata, guess)
 plt.plot(x_line, func(x_line, *popt), "b-", label="Fit")
-plt.plot(x_line, func(x_line, *guess), "g-", label="Theoriekurve")
+plt.plot(x_line, func(x_line, *guess), "g-", label="Idealkurve mit Theoriewerten")
 
 
 print(popt)
